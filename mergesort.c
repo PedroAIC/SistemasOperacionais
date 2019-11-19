@@ -155,9 +155,7 @@ void *merge_sort(void *arg)
       low = thread_part * (iContTotalLinhas / globalQtdThreads);
       high = (thread_part + 1) * (iContTotalLinhas / globalQtdThreads) - 1;
    }
-
-   printf("Thread - %d - Low - %d - High - %d\n", comparador, low, high);
-
+   
    // evaluating mid point
    int mid = low + (high - low) / 2;
    if (low < high)
