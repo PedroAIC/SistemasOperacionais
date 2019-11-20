@@ -1,4 +1,5 @@
-Universidade Estadual de Campinas                                         Relatório Final do Projeto 1 de "Merge and sort"
+Universidade Estadual de Campinas                                         
+Relatório Final do Projeto 1 de "Merge and sort"
 
 #  Descrição da solução do problema 
 
