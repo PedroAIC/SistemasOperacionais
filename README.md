@@ -30,21 +30,21 @@ Compilado com sucesso, chega a etapa de abastecer o programa com N arquivos cont
 
 - ./mergesort  *16* <u>arq1.dat arq2.dat arq3.dat arq4.dat arq5.dat</u> -o **saída.txt**
 
-# Gráficos
+# Gráfico e Tabela
 
 Todos os testes referentes a esse programa foram feitos na LP01, laboratório de informática da faculdade de tecnologia da UNICAMP, no computador de código LI014.
 
 O Gráfico, a seguir, mostra a eficiência do programa ao executar a tarefa com 2, 4, 8 e 16 threads e diferentes números de arquivos de entrada, podendo variar de 1 a 5, com 1000 dados de conteúdo cada: 
 
-![](C:\Users\pedro\Desktop\Desempenho do código.png)
+ ![img](https://lh5.googleusercontent.com/EDVAn4f4JKjfbth_YsLMWSpP3oUXSsj-KOZgTuxwkAMRmGs7l0eFMCbW1U-vhnq3YCyOP1QvzwzEbgdJyB9slI8UUO2u57g-ThLRdob8JAgvG80xwMVdr6-H0WtWtNAYU_4z8luX) 
 
-​																															Gráfico1:TempoXThreads													
+​																									Gráfico1:TempoXThreads													
 
 A tabela, em seguida, mostra o tempo que as N threads demoram para finalizar  o sistema com N arquivos. 
 
-![1](C:\Users\pedro\Desktop\1.png)
+ ![img](https://lh4.googleusercontent.com/6mnlvlogZR0l9RFOEQe5-q9GwcAIvzCLV0CRo_zMrSdf6pz12vAXFVNpjwPa8lZh7uVBhpSsMWjSSoFDq3Qay0m7VKnBeVEpSaj0zulupM3RzkR2xSKAPiPbDTZYHvBqlzKg5Ek8) 
 
-​																													Tabela1: Desempenho do código
+​															Tabela1: Desempenho do código
 
 # Conclusão
 
