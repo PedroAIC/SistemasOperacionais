@@ -125,10 +125,10 @@ void merge_sort1(int low, int high)
    }
 }
 
-// thread function for multi-threading
+// Função thread para multi threads
 void *merge_sort(void *arg)
 {
-   // which part out of thread parts
+   // Qual parte que cada thread vai cuidar
    int thread_part = part++;
    int comparador = part;
 
