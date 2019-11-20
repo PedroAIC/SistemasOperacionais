@@ -50,29 +50,28 @@ void FileReader(char sFileName[100])
    iArquivosLidos++;
 }
 
-// merge function for merging two parts
+// Função para mesclar partes
 void merge(int low, int mid, int high)
 {
    int kSort, jSort, auxSort;
    int *left[mid - low + 1];
    int *right[high - mid];
 
-   // n1 is size of left part and n2 is size
-   // of right part
+   // n1 é o tamanho da parte da esquerda e n2 o tamanho da parte da direita
    int n1 = mid - low + 1, n2 = high - mid, i, j;
 
-   // storing values in left part
+   // Armazenando valores - parte esquerda
    for (i = 0; i < n1; i++)
       left[i] = arrayNumbers[i + low];
 
-   // storing values in right part
+   // Armazenando valores - parte direita
    for (i = 0; i < n2; i++)
       right[i] = arrayNumbers[i + mid + 1];
 
    int k = low;
    i = j = 0;
 
-   // merge left and right in ascending order
+   // mescla e ordena
    while (i < n1 && j < n2)
    {
       if (left[i] <= right[j])
@@ -81,13 +80,13 @@ void merge(int low, int mid, int high)
          arrayNumbers[k++] = right[j++];
    }  
 
-   // insert remaining values from left
+   // insere os valores restantes da esquerda
    while (i < n1)
    {
       arrayNumbers[k++] = left[i++];
    }
 
-   // insert remaining values from right
+   // insere os valores restantes da direita
    while (j < n2)
    {
       arrayNumbers[k++] = right[j++];
@@ -107,21 +106,21 @@ void merge(int low, int mid, int high)
    }
 }
 
-// merge sort function
+// função mergesort1
 void merge_sort1(int low, int high)
 {
-   // calculating mid point of array
+   // calculando ponto médio
    int mid = low + (high - low) / 2;
    // printf("Low - %d Mid 2 - %d - High - %d\n", low, mid, high);
    if (low < high)
    {
-      // calling first half
+      // chamando a primeira metade
       merge_sort1(low, mid);
 
-      // calling second half
+      // chamando a segunda metade
       merge_sort1(mid + 1, high);
 
-      // merging the two halves
+      // juntando as duas metades
       merge(low, mid, high);
    }
 }
@@ -137,7 +136,7 @@ void *merge_sort(void *arg)
    int qtdLinhasRestantes = (iContTotalLinhas % globalQtdThreads);
    if ((qtdLinhasRestantes) != 0)
    {
-      // calculating low and high
+      // calculando variavel low e high
       if (comparador == globalQtdThreads)
       {
          low = thread_part * (iContTotalLinhas / globalQtdThreads);
@@ -151,12 +150,12 @@ void *merge_sort(void *arg)
    }
    else
    {
-      // calculating low and high
+      // calculando variavel low e high
       low = thread_part * (iContTotalLinhas / globalQtdThreads);
       high = (thread_part + 1) * (iContTotalLinhas / globalQtdThreads) - 1;
    }
    
-   // evaluating mid point
+   // avaliando mid
    int mid = low + (high - low) / 2;
    if (low < high)
    {
