@@ -51,4 +51,4 @@ A tabela, em seguida, mostra o tempo que as N threads demoram para finalizar  o 
 
 Em virtude dos resultados demonstrados no tópico anterior, pode-se concluir que quanto mais threads executam a tarefa, mais eficiente se torna o processamento dos arquivos, pois o número total de informações disponíveis está sendo lido e dividido igualmente para que cada thread faça o processamento.
 
-O link a seguir leva ao vídeo de funcionamento do programa:
+O link a seguir leva ao vídeo de funcionamento do programa: https://youtu.be/qkJTgvZ8VNU
